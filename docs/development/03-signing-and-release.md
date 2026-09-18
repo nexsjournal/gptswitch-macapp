@@ -16,7 +16,7 @@ macOS 对**从网络下载**的应用有两道独立的关卡，很多人把它�
 不是文件真的坏了。用户可以右键 → 打开，或执行一次：
 
 ```bash
-xattr -dr com.apple.quarantine /Applications/GPTSwitch.app
+xattr -dr com.apple.quarantine /Applications/Switchelp.app
 ```
 
 但这要求用户懂这些。**要让别人无感双击就打开，必须签名 + 公证 + 装订票据（staple）。**
@@ -86,9 +86,9 @@ pnpm exec tauri build --bundles app,dmg
 Tauri 会在签名后自动提交公证并装订票据。校验：
 
 ```bash
-codesign --verify --deep --strict --verbose=2 target/release/bundle/macos/GPTSwitch.app
-spctl --assess --type execute -vv target/release/bundle/macos/GPTSwitch.app   # 期望 accepted
-xcrun stapler validate target/release/bundle/dmg/GPTSwitch_*.dmg             # 期望 validate action worked
+codesign --verify --deep --strict --verbose=2 target/release/bundle/macos/Switchelp.app
+spctl --assess --type execute -vv target/release/bundle/macos/Switchelp.app   # 期望 accepted
+xcrun stapler validate target/release/bundle/dmg/Switchelp_*.dmg             # 期望 validate action worked
 ```
 
 `spctl` 显示 **accepted** 才代表别人下载后双击就能打开。
@@ -127,7 +127,7 @@ Tauri 会给 `.msi` / `.exe` 签名，SmartScreen 的警告随之消失。
 
 ```bash
 pnpm exec tauri build --bundles app
-xattr -dr com.apple.quarantine /Applications/GPTSwitch.app   # 拷贝到 /Applications 之后执行一次
+xattr -dr com.apple.quarantine /Applications/Switchelp.app   # 拷贝到 /Applications 之后执行一次
 ```
 
 但**分发**给别人时不要走这条路：要求每个用户执行 `xattr` 是不合理的交付方式。

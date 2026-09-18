@@ -33,7 +33,7 @@ model_provider = "gptswitch"
 model_catalog_json = "/absolute/app-data/catalogs/rev_0007/models.json"
 
 [model_providers.gptswitch]
-name = "GPTSwitch"
+name = "Switchelp"
 base_url = "http://127.0.0.1:18765/i/local-main/c/rev_0007/v1"
 wire_api = "responses"
 
