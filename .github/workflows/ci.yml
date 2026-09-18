@@ -47,7 +47,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          # 与 rust-toolchain.toml 一致：不固定的话 CI 装到的更新版本会报出本地没有的 lint。
+          toolchain: 1.88.0
       - uses: swatinem/rust-cache@v2
         with:
           # 工作区根在仓库根目录，不是 src-tauri——写成 src-tauri 会让缓存键只看成员清单，
@@ -63,8 +66,11 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: dtolnay/rust-toolchain@master
         with:
+          # 固定版本：rustfmt 的排版与 clippy 的 lint 集合都随版本变化，不固定的话
+          # CI 装到的新版本会报出本地没有的 lint（本仓库的 MSRV 见 Cargo.toml 的 rust-version）。
+          toolchain: 1.88.0
           components: rustfmt, clippy
       - uses: swatinem/rust-cache@v2
         with:

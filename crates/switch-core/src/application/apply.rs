@@ -873,7 +873,7 @@ impl ApplyService {
     ) -> Result<RuntimePublication, CoreError> {
         let policy_revision = RevisionId::new(format!(
             "pol_{}",
-            &hash(
+            hash(
                 &serde_json::to_string(managed)
                     .map_err(|_| CoreError::internal("策略序列化失败"))?
             )
