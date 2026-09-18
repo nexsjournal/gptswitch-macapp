@@ -1,6 +1,8 @@
 # 数据模型与接口契约
 
-以下是开发契约草案，不是已实现的数据库/API。命名统一：持久化与 Rust 使用 snake_case，TypeScript DTO 使用 camelCase；转换从同一类型源生成。
+命名统一：持久化与 Rust 使用 snake_case，TypeScript DTO 使用 camelCase。
+
+两种类型目前是**手工同步**：Rust 侧改了字段，`src/contracts/types.ts` 要跟着改，没有编译期约束（设计里计划由 Rust 类型生成 TS 类型，尚未实现）。改 IPC 契约时两侧一起改，并用 `pnpm typecheck` 与 `cargo test -p switch-core` 兜住。
 
 ## 1. 实体与关系
 
