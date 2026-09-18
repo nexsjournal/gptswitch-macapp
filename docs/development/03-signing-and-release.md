@@ -23,13 +23,16 @@ xattr -dr com.apple.quarantine /Applications/Switchelp.app
 
 ## 2. 这个仓库现在的状态
 
-本机钥匙串里已有的身份：
+本机钥匙串里应当有的身份（用 `security find-identity -v -p codesigning` 查）：
 
 ```
-Developer ID Application: Ning Lei (73T32522SH)      ← 分发用，正确
+Developer ID Application: <你的名字> (TEAMID1234)     ← 分发用，正确
 Apple Development: ...                                ← 仅本机调试
 Apple Distribution: ...                               ← 仅 App Store 提交
 ```
+
+下面一律用 `<你的名字>` 与 `TEAMID1234` 占位：真实姓名与团队 ID 属于个人与组织信息，
+不写进这个公开仓库。
 
 | 能力 | 现状 |
 | --- | --- |
@@ -69,7 +72,7 @@ xcrun notarytool store-credentials gptswitch \
 xcrun notarytool store-credentials gptswitch \
   --apple-id "你的 Apple ID" \
   --password "刚生成的专用密码" \
-  --team-id 73T32522SH
+  --team-id TEAMID1234
 ```
 
 ### 有了凭据之后
@@ -77,9 +80,9 @@ xcrun notarytool store-credentials gptswitch \
 本机出包：
 
 ```bash
-APPLE_SIGNING_IDENTITY="Developer ID Application: Ning Lei (73T32522SH)" \
+APPLE_SIGNING_IDENTITY="Developer ID Application: <你的名字> (TEAMID1234)" \
 APPLE_KEYCHAIN_PROFILE=gptswitch \
-APPLE_TEAM_ID=73T32522SH \
+APPLE_TEAM_ID=TEAMID1234 \
 pnpm exec tauri build --bundles app,dmg
 ```
 
@@ -103,8 +106,8 @@ xcrun stapler validate target/release/bundle/dmg/Switchelp_*.dmg             # �
 | --- | --- | --- |
 | `APPLE_CERTIFICATE` | Developer ID 证书（.p12 的 base64） | 见下 |
 | `APPLE_CERTIFICATE_PASSWORD` | 导出 .p12 时设的密码 | 导出时自定 |
-| `APPLE_SIGNING_IDENTITY` | 例如 `Developer ID Application: Ning Lei (73T32522SH)` | 固定字符串 |
-| `APPLE_TEAM_ID` | `73T32522SH` | 固定字符串 |
+| `APPLE_SIGNING_IDENTITY` | 例如 `Developer ID Application: <你的名字> (TEAMID1234)` | 固定字符串 |
+| `APPLE_TEAM_ID` | `TEAMID1234` | 固定字符串 |
 | `APPLE_API_KEY` | AuthKey .p8 的 base64 | 方式 A 下载的文件 |
 | `APPLE_API_KEY_ID` / `APPLE_API_ISSUER` | 方式 A 得到的两个值 | App Store Connect |
 | `WINDOWS_CERTIFICATE` / `WINDOWS_CERTIFICATE_PASSWORD` | Windows 代码签名证书 | 见下 |
