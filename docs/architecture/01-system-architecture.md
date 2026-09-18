@@ -37,7 +37,7 @@ CodexSplit 公开 macOS 源码采用 **SwiftUI/AppKit → WKWebView → 本地 H
 
 ```mermaid
 flowchart LR
-  UI[GPTSwitch React 窗口] -->|类型化 IPC| Core[Rust 控制核心]
+  UI[Switchelp React 窗口] -->|类型化 IPC| Core[Rust 控制核心]
   Tray[托盘与菜单栏] --> Core
   Core --> DB[(元数据与事务库)]
   Core --> Vault[系统凭据库]
@@ -78,7 +78,7 @@ React 业务组件只依赖类型化 DesktopClient；Tauri invoke/listen 集中�
 
 ## 4. 进程生命周期
 
-初版网关运行在 Tauri Rust 主进程的异步任务中。窗口关闭仅隐藏窗口，托盘继续服务；“退出 GPTSwitch”需要告知第三方调用将中断，默认等待当前请求结束，不自动强杀 Codex。
+初版网关运行在 Tauri Rust 主进程的异步任务中。窗口关闭仅隐藏窗口，托盘继续服务；“退出 Switchelp”需要告知第三方调用将中断，默认等待当前请求结束，不自动强杀 Codex。
 
 单实例锁按“OS 用户 + 应用数据目录”建立。控制 IPC 不开放 HTTP 管理接口。网关首次选择一个空闲 loopback 端口，保存为实例设置，后续固定使用；端口被别的进程占用时提示冲突，不能自动杀进程或悄悄换端口使 Codex 失联。
 

@@ -16,7 +16,7 @@
 
 DSH 的主路径属于第一种：本地 Host 提供 Web UI，Electron 显示它。其主窗口拦截跨源导航；新开链接经允许的协议交给系统外部处理，拒绝在应用内自动创建新网页窗口。[窗口实现][dsh-shell]
 
-因此，这个参考补充了 Electron 桌面工程的做法，但没有为 GPTSwitch 新增“必须内嵌网站”的需求。**按当前配置工具范围，仍保留 Tauri + Rust；参考 DSH 的窗口生命周期、平台适配与恢复设计。** Electron 是可选的桌面壳，并不要求产品先拥有浏览器功能；保留 Tauri 是当前范围下的取舍，不是认定 Electron 不适合配置工具。
+因此，这个参考补充了 Electron 桌面工程的做法，但没有为 Switchelp 新增“必须内嵌网站”的需求。**按当前配置工具范围，仍保留 Tauri + Rust；参考 DSH 的窗口生命周期、平台适配与恢复设计。** Electron 是可选的桌面壳，并不要求产品先拥有浏览器功能；保留 Tauri 是当前范围下的取舍，不是认定 Electron 不适合配置工具。
 
 ## 2. 快照与读取范围
 
@@ -56,7 +56,7 @@ DSH 的主路径属于第一种：本地 Host 提供 Web UI，Electron 显示它
 
 ## 4. 本项目具体借鉴什么
 
-| DSH 做法 | GPTSwitch 的采用方式 | 边界 |
+| DSH 做法 | Switchelp 的采用方式 | 边界 |
 | --- | --- | --- |
 | 一代 shell 统一持有窗口、托盘、监听器 | `DesktopSession` 统一装配与幂等释放；核心服务独立于窗口显示 | shell 生命周期不等于配置 Revision，重开窗口不能重新应用配置 |
 | 平台策略集中处理差异 | macOS / Windows 的窗口、菜单、托盘与文件定位集中在壳适配 | 不把平台判断散到 React 页面 |
@@ -69,7 +69,7 @@ DSH 的主路径属于第一种：本地 Host 提供 Web UI，Electron 显示它
 
 ## 5. 不照搬的部分
 
-DSH 已经有 Host、插件与 Web 客户端，使用本地 HTTP/WebSocket carrier 有其上下文。GPTSwitch 的界面是新建的配置管理界面，没有浏览器远程访问要求，继续使用受限桌面 IPC，不另开 Web 管理端口。
+DSH 已经有 Host、插件与 Web 客户端，使用本地 HTTP/WebSocket carrier 有其上下文。Switchelp 的界面是新建的配置管理界面，没有浏览器远程访问要求，继续使用受限桌面 IPC，不另开 Web 管理端口。
 
 DSH 的 profile 插件装配、终端、局域网入口和多种桌面呈现模式不进入本项目 P0；Rust 核心与模型网关也不改写成 DSH 插件。视觉仍沿用 CodexSplit 黑灰风格，不引入另一套玻璃材质和多套窗口栏。
 
