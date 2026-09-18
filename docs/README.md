@@ -1,0 +1,52 @@
+# GPTSwitch 调研与设计文档
+
+版本：0.2 · 初稿：2026-09-17 · 更新：2026-09-18 · 状态：开发前方案，尚未实现或进行真实供应商端到端验证。
+
+产品暂称 **GPTSwitch**，最终名称、应用标识及签名主体在发布前确定。本文档中的技术选型、性能数字和交互尺寸是本项目的设计决策或验收目标，不是现有产品已经具备的能力。
+
+## 核心结论
+
+做一个专注于 Codex 的本地供应商与模型配置工具：管理多个供应商和 API Key，让导入的模型出现在 **Codex 自己的模型选择器** 中，并能配置上下文、输出限制、输入能力与推理选项。主界面延续参考截图的深色、灰阶卡片、白色主按钮和固定侧栏。
+
+推荐 **Tauri 2 + React + TypeScript + Rust**。第三方模型统一经过本机网关，凭据保存在系统凭据库；网关将稳定的模型身份映射到具体供应商和 Key。优先使用 Codex 的自定义 provider 与 `model_catalog_json`，先做隔离验证；只有受支持的 Desktop 版本确实需要时才引入进程级 Bridge。不能把 CLI 配置成功当作 Desktop 菜单已经生效。
+
+2026-09-18 根据星算助手开发者的迁移反馈复审：当前配置工具范围保留 Tauri，Rust 核心与桌面壳解耦；若确定需要高频内嵌控制台、多标签或独立网页会话，在创建工程前优先改 **Electron + Rust core-host**。详见 [桌面壳选型复审](research/03-desktop-shell-decision.md)，不能将“内嵌浏览器成本”直接推广成所有桌面工具的结论。
+
+“流畅切换”分成两种：相同模型和能力下更换 Key、调整请求参数，目标是后续请求生效且不用重启；增删菜单模型或修改菜单能力，当前证据指向启动时加载，集中到一次明确的应用操作。不得承诺所有修改都能热更新。官方订阅原生模式与第三方模式保留清楚的边界；二者同菜单无缝共存属于独立兼容目标。
+
+## 阅读顺序
+
+| 文档 | 内容 |
+| --- | --- |
+| [01 产品需求](01-product-requirements.md) | 用户目标、范围、优先级、成功标准 |
+| [参考项目调研](research/01-reference-projects.md) | 三个仓库、星算助手、截图、代码链路与取舍 |
+| [Codex 可行性](research/02-codex-feasibility.md) | 菜单接入、字段边界、证据等级与验证门槛 |
+| [桌面壳选型复审](research/03-desktop-shell-decision.md) | 星算助手迁移反馈、Tauri/Electron 对比、内嵌浏览器边界与切换条件 |
+| [DSH Desktop 补充调研](research/04-dsh-reference.md) | Electron 实际用法、本地界面与网站浏览器的区别、窗口/平台/恢复设计 |
+| [总体架构](architecture/01-system-architecture.md) | 技术选型、模块、进程和架构决策 |
+| [配置与应用事务](architecture/02-configuration-lifecycle.md) | 配置优先级、差异预览、原子写入、回滚、冲突 |
+| [网关与协议](architecture/03-gateway-and-protocols.md) | 路由、流式响应、工具调用、输出限制、重试 |
+| [数据与接口](architecture/04-data-and-contracts.md) | 实体、关系、IPC、事件和错误契约 |
+| [安全与跨平台](architecture/05-security-and-platforms.md) | Keychain、Windows 凭据、进程、安装与更新 |
+| [视觉系统](design/01-foundations.md) | 色彩、布局、间距、尺寸、动效与主题 |
+| [图标、字体与文案](design/02-icons-type-and-copy.md) | Lucide 映射、字阶、品牌图标、状态文案 |
+| [组件规范](design/03-components.md) | 基础组件与业务组件的状态和交互 |
+| [页面与流程](design/04-pages-and-flows.md) | 页面结构、线框、操作、校验、空态与异常 |
+| [模板与交互规则](design/05-patterns-and-accessibility.md) | 页面模板、系统交互、键盘与无障碍 |
+| [开发计划](development/01-implementation-plan.md) | 分期、任务、依赖、产物与工期估算 |
+| [测试与发布](development/02-testing-and-release.md) | 兼容实验、协议测试、双平台验收与发布门禁 |
+| [证据索引](appendix/01-source-index.md) | 仓库 SHA、源码定位、本地证据与调研边界 |
+| [需求追踪与待验证项](appendix/02-traceability-and-risks.md) | 每条需求的实现、页面、测试和未决问题 |
+
+## 当前已经完成什么
+
+- 克隆并固定三个参考仓库的调研快照；阅读核心文档、相关实现和代表性测试，未运行第三方安装脚本。
+- 追加固定 DSH Desktop 快照，阅读桌面壳、视图、导航、preload、平台与恢复代码；修订桌面壳边界，未运行该项目。
+- 查看 `referimg/` 中全部 9 张截图；只提取界面结构，不将截图中的会话内容和供应商凭据写入文档。
+- 只读查看已安装星算助手的模型中心、添加模型表单和 Codex 工具配置；检查安装包中的程序结构与相关前端调用。
+- 核对官方配置文档、上游 schema，以及本机 Codex 二进制生成的 app-server schema。
+- 输出需求、技术、设计、实施、验收和证据文档。未创建应用工程，未切换模型、调用供应商 API、读取完整密钥或修改现有 Codex 配置。
+
+## 进入开发前最先做的事
+
+先执行 [G0 兼容性验证](development/01-implementation-plan.md)，在隔离目录、测试账号和 macOS / Windows 真机中证明：模型菜单出现、选中后确实路由到对应模型、能力设置真实生效、失败可以恢复。G0 没通过，不能用一个漂亮配置界面代替核心能力。

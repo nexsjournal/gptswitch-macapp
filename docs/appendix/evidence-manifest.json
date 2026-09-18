@@ -1,0 +1,542 @@
+{
+  "research_date": "2026-09-17",
+  "status": "documentation_only",
+  "repositories": [
+    {
+      "repo": "https://github.com/AITabby/codexsplit",
+      "commit": "6cab7ed6fe1d2ad910aa7fef3128e67669221604",
+      "version": "2.0.4",
+      "tracked_file_count": 758,
+      "project_license_files": [],
+      "inspected_entries": [
+        {
+          "path": "package.json",
+          "line": 3,
+          "subject": "源码版本与构建入口",
+          "sha256": "8ababb4445592bdb0408e2a5be8aef1ec4263ba996ff128ade398d27e15ab112"
+        },
+        {
+          "path": "README.md",
+          "line": 7,
+          "subject": "产品定位、历史命名和功能边界",
+          "sha256": "687088de6ee379e218fcabed3822c9611f0f0e20c426d7064d265a70845d3aee"
+        },
+        {
+          "path": "docs/PROVIDER_WORKSPACE_REDESIGN.md",
+          "line": 1,
+          "subject": "产品边界与真实能力说明",
+          "sha256": "a1afb7e5a1e737e2068dd05972b4c75f20504397fbaacdefa553081fd2302c36"
+        },
+        {
+          "path": "macos-app/README.md",
+          "line": 1,
+          "subject": "macOS 壳、Node 与后台生命周期",
+          "sha256": "2c3c8d53df77444c3e7a53969bb70bca2b0c794407d353fac91da43321fc2ee5"
+        },
+        {
+          "path": "src_v2/server/gateway.ts",
+          "line": 479,
+          "subject": "配置生成",
+          "sha256": "4e89daa93dac60850d221c4b968f2f549d62e207883124f0b71c8f2a8a535d8b"
+        },
+        {
+          "path": "src_v2/server/gateway.ts",
+          "line": 457,
+          "subject": "旧字段清理路径",
+          "sha256": "4e89daa93dac60850d221c4b968f2f549d62e207883124f0b71c8f2a8a535d8b"
+        },
+        {
+          "path": "src_v2/server/gateway.ts",
+          "line": 760,
+          "subject": "进程级 Bridge 环境",
+          "sha256": "4e89daa93dac60850d221c4b968f2f549d62e207883124f0b71c8f2a8a535d8b"
+        },
+        {
+          "path": "src_v2/server/gateway.ts",
+          "line": 2894,
+          "subject": "运行状态协调",
+          "sha256": "4e89daa93dac60850d221c4b968f2f549d62e207883124f0b71c8f2a8a535d8b"
+        },
+        {
+          "path": "src_v2/codex-provider-bridge.ts",
+          "line": 305,
+          "subject": "官方/第三方身份判断",
+          "sha256": "8942468af272a7cf570894fa2cf345289ede4ca2e2a10014f2a71502d828d1b6"
+        },
+        {
+          "path": "src_v2/codex-provider-bridge.ts",
+          "line": 2003,
+          "subject": "原生运行时启动",
+          "sha256": "8942468af272a7cf570894fa2cf345289ede4ca2e2a10014f2a71502d828d1b6"
+        },
+        {
+          "path": "src_v2/services/catalog_sync.ts",
+          "line": 230,
+          "subject": "推理默认档位",
+          "sha256": "a5c0c558b6c27df819bb73022e3d0a7ab52d495f69162a82dee9ae93bf5551aa"
+        },
+        {
+          "path": "src_v2/services/catalog_sync.ts",
+          "line": 473,
+          "subject": "视觉声明与转换策略",
+          "sha256": "a5c0c558b6c27df819bb73022e3d0a7ab52d495f69162a82dee9ae93bf5551aa"
+        },
+        {
+          "path": "src_v2/services/catalog_sync.ts",
+          "line": 825,
+          "subject": "模型缓存投影",
+          "sha256": "a5c0c558b6c27df819bb73022e3d0a7ab52d495f69162a82dee9ae93bf5551aa"
+        },
+        {
+          "path": "src_v2/services/credential_store.ts",
+          "line": 19,
+          "subject": "凭据引用与 Keychain",
+          "sha256": "ddad29f67e46fa8b15331bda850f23c887f5e504c58a5a27c0daaf8da2ad98a7"
+        },
+        {
+          "path": "src_v2/core/types.ts",
+          "line": 304,
+          "subject": "模型内部元数据",
+          "sha256": "ee540a3c12de7f53d343f9188e7e6ae88e6f541d05ba2b262120bbd506beba18"
+        },
+        {
+          "path": "src_v2/services/dashboard.ts",
+          "line": 376,
+          "subject": "UI 模型发现表单",
+          "sha256": "f8fa824b34aec1b95f64a78fc4fa8c5a581dd946de322c8dd830e8c69aa8c79a"
+        },
+        {
+          "path": "src_v2/adapters/base.ts",
+          "line": 7,
+          "subject": "协议适配器接口",
+          "sha256": "02e608e811e9e42b6246fe2d18d97d6b81419e5c174ed268f57bf4412367b284"
+        },
+        {
+          "path": "test/model_catalog_identity.test.mjs",
+          "line": 31,
+          "subject": "能力身份测试",
+          "sha256": "8d86eaaaf3bc2b41700c74c51f7ba038800c4576fb1daf122b165550db817b97"
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "line": 5,
+          "subject": "第三方元数据说明",
+          "sha256": "124052a89a8d4a7e5eb98232ab855c1127e928def1123218f426e917de9f04f5"
+        },
+        {
+          "path": "TEST_FLOW.md",
+          "line": 1,
+          "subject": "历史测试流程，仅阅读，未执行",
+          "sha256": "b54cd3ad50de60ac510d1916b8e08c67387cf9c0a4b192af997b336f80a11991"
+        },
+        {
+          "path": "macos-app/Package.swift",
+          "line": 1,
+          "subject": "Swift Package 与 macOS 壳目标",
+          "sha256": "7b9ab1b89c0406943cdc188e2cc98ac0b5cd405c8d03eb978e7a74be3a2f3e75"
+        },
+        {
+          "path": "macos-app/Sources/OpenCodex/OpenCodexApp.swift",
+          "line": 27,
+          "subject": "SwiftUI 原生窗口与后台生命周期",
+          "sha256": "ffc4439315927fa47b94de5dedd021e6787ef8db1399ff8e4f3f3152f3ab8405"
+        },
+        {
+          "path": "macos-app/Sources/OpenCodex/DashboardView.swift",
+          "line": 5,
+          "subject": "WKWebView 嵌入",
+          "sha256": "c1d128b49f1658d7806cb57eb50f7af01427d4ef34f706b38a512be8ef30e661"
+        },
+        {
+          "path": "macos-app/Sources/OpenCodex/GatewayProcess.swift",
+          "line": 55,
+          "subject": "本机 Dashboard 与 Node sidecar 启动",
+          "sha256": "b48788aebed7cbde91e1fc4f83b9c6e4d8f78615b75cf9621bbe08672c4c6f6a"
+        },
+        {
+          "path": "src_v2/services/dashboard.ts",
+          "line": 1,
+          "subject": "无框架 HTML/CSS/JavaScript 主界面",
+          "sha256": "f8fa824b34aec1b95f64a78fc4fa8c5a581dd946de322c8dd830e8c69aa8c79a"
+        },
+        {
+          "path": "src_v2/server/gateway.ts",
+          "line": 4407,
+          "subject": "Node 原生 HTTP 服务",
+          "sha256": "4e89daa93dac60850d221c4b968f2f549d62e207883124f0b71c8f2a8a535d8b"
+        },
+        {
+          "path": "README.md",
+          "line": 63,
+          "subject": "Windows EXE 与源码发布范围",
+          "sha256": "687088de6ee379e218fcabed3822c9611f0f0e20c426d7064d265a70845d3aee"
+        },
+        {
+          "path": "tsconfig.json",
+          "line": 1,
+          "subject": "src_v2 编译至 dist",
+          "sha256": "3f600f8501da92e4f86dd93370580526f232727274a6731a42d45cb30872ec60"
+        }
+      ],
+      "head_rechecked_date": "2026-09-18"
+    },
+    {
+      "repo": "https://github.com/christiandoxa/prodex",
+      "commit": "9580d5f13bb458b1ba5e2783c89a3e77ab1c6dec",
+      "version": "0.429.4",
+      "tracked_file_count": 2785,
+      "project_license_files": [
+        "LICENSE"
+      ],
+      "inspected_entries": [
+        {
+          "path": "Cargo.toml",
+          "line": 3,
+          "subject": "版本和依赖",
+          "sha256": "3508ad294092822963b635fd1fdbd368ed66bd9ba5e51cf6e1a226f40071b025"
+        },
+        {
+          "path": "LICENSE",
+          "line": 1,
+          "subject": "许可证事实",
+          "sha256": "92f2435267d9b7854c941a1e095cc8cd72bf6ad0dbadfca2459fff293c4a3b2b"
+        },
+        {
+          "path": "docs/architecture.md",
+          "line": 64,
+          "subject": "运行时边界",
+          "sha256": "bad38b47584601e59a594dc434100ab6496c8daec507e681cf3c65948623dc51"
+        },
+        {
+          "path": "docs/state-model.md",
+          "line": 40,
+          "subject": "续接绑定与状态所有权",
+          "sha256": "54366ddf46fe04eb35a0185b784d55c6dfb9bcb90e0a62514fbfe8e9ed4b1aac"
+        },
+        {
+          "path": "docs/provider-conformance.md",
+          "line": 42,
+          "subject": "转换损失及一致性测试",
+          "sha256": "3b4d4f8699ff3e007688d23356ac7e3ae3e0be81b4b4ef7afa2825d9a38cbd01"
+        },
+        {
+          "path": "docs/provider-capabilities.md",
+          "line": 15,
+          "subject": "能力矩阵",
+          "sha256": "4e2225ff0787be219de338fce45f2a408c36414c57c7857c6039fba04642f07f"
+        },
+        {
+          "path": "crates/prodex-app/src/runtime_external_provider_config.rs",
+          "line": 58,
+          "subject": "外部目录注入",
+          "sha256": "2183320ad520e27c9fbd0eb0c74e232817ad71357649ff639ea367040cf9aeee"
+        },
+        {
+          "path": "crates/prodex-app/src/runtime_external_provider_config/catalog_model.rs",
+          "line": 26,
+          "subject": "ModelInfo 目录构建",
+          "sha256": "51520383921776342e726d253352a2567de143a4faaa66aed42c1cbe88da95fe"
+        },
+        {
+          "path": "crates/prodex-provider-spi/src/lib.rs",
+          "line": 34,
+          "subject": "供应商路由边界",
+          "sha256": "01c1b582b0179376659ca2f522c87cc3bf0436942950aaa75ae58d4f8b26592f"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/Lampese/codex-switcher",
+      "commit": "839f2882f3a756fac074d483c39e7d2ecd582fd5",
+      "version": "0.2.18",
+      "tracked_file_count": 136,
+      "project_license_files": [],
+      "inspected_entries": [
+        {
+          "path": "package.json",
+          "line": 4,
+          "subject": "前端栈与版本",
+          "sha256": "316bc5ff9beb2f557cc79da2cc2540a88a8f7c783e1210a8ba76f0b0deacce4c"
+        },
+        {
+          "path": "README.md",
+          "line": 128,
+          "subject": "账号切换产品机制",
+          "sha256": "f000c4d1018d333dede969b3a5ea7a271be7a70009d0f7b5bc4c264cb9470df2"
+        },
+        {
+          "path": "src-tauri/Cargo.toml",
+          "line": 17,
+          "subject": "桌面栈与 OS 依赖",
+          "sha256": "1d10894f5a758e0fccdcf5ed2aac971ca156873340e83d2f62e155ad8c8a6e58"
+        },
+        {
+          "path": "src-tauri/src/commands/account.rs",
+          "line": 135,
+          "subject": "认证锁与切换顺序",
+          "sha256": "22936d6ab56cb194edaf93f829acac19400825662e2a54ff988b340b1213f8a3"
+        },
+        {
+          "path": "src-tauri/src/auth/switcher.rs",
+          "line": 30,
+          "subject": "auth.json 写入",
+          "sha256": "b805325af1b713ace9976cc0ab8362e5da983b8478da8642ecb0a747b4c56cb6"
+        },
+        {
+          "path": "src-tauri/src/auth/storage.rs",
+          "line": 13,
+          "subject": "同步当前 token",
+          "sha256": "1c9113f8b7513d66d5eb5b47d40c9d7948892476f473c70c6a9e09e9a9f200ac"
+        },
+        {
+          "path": "src-tauri/tauri.windows.conf.json",
+          "line": 4,
+          "subject": "Windows 壳配置",
+          "sha256": "bc258b32bfc6b095713c6a7241f8b089ebf4315a5a837359fd5c3889208e88e7"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/anywhere-labs/dsh-desktop",
+      "commit": "cb736b6edfdd1e0584dea2252c23c7b4bf11420c",
+      "version": "dsh-plugin-desktop 2.0.11",
+      "tracked_file_count": 1703,
+      "project_license_files": [
+        "LICENSE"
+      ],
+      "research_date": "2026-09-18",
+      "scope": "Sparse checkout; desktop shell source and representative tests read only; no build or runtime validation; upstream submodule not initialized",
+      "inspected_entries": [
+        {
+          "path": "dsh-plugin-desktop/package.json",
+          "line": 3,
+          "subject": "桌面包版本、Electron 与打包依赖",
+          "sha256": "53ed7468bb7df6921c34c8469cca0f34f11e3ce4f702f5614fe98448eb2fa38e"
+        },
+        {
+          "path": "docs/architecture.md",
+          "line": 5,
+          "subject": "Host/Web carrier 与 Electron 壳边界",
+          "sha256": "4ff3830ca88f9d922742612cd5290848a77497adcd7525efa800d36fe3ca9930"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/electron-shell-generation.ts",
+          "line": 446,
+          "subject": "主 frame 同源导航限制",
+          "sha256": "341228010f6a467884c17a6b908a19d55e77757e378ffc6595da0d8d7ecb5f52"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/electron-shell-generation.ts",
+          "line": 538,
+          "subject": "外链交给系统处理",
+          "sha256": "341228010f6a467884c17a6b908a19d55e77757e378ffc6595da0d8d7ecb5f52"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/electron-shell-generation.ts",
+          "line": 794,
+          "subject": "窗口托盘与监听器统一释放",
+          "sha256": "341228010f6a467884c17a6b908a19d55e77757e378ffc6595da0d8d7ecb5f52"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/compatibility-shell.ts",
+          "line": 33,
+          "subject": "本地窗口栏与内容的两个 WebContentsView",
+          "sha256": "fa65895c67b955ca1023b2f6427c493376b6aed50ca00dbfc38b97d470e81aea"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/window-options.ts",
+          "line": 28,
+          "subject": "renderer 隔离和会话配置",
+          "sha256": "9114478e760d1611502580ebbf81c47a1ee43d5a811c14dd8fe41e0adf623a83"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/preload.ts",
+          "line": 1,
+          "subject": "当前代码的有限 preload 接口",
+          "sha256": "977aa88636be7276dc0b3f7d883749a43f9b8e9892ed803cfa71de4af53d1cd3"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/renderer-actions-dispatch.ts",
+          "line": 39,
+          "subject": "有限动作派发",
+          "sha256": "8c2665a93b51e1396534d9225fb5ef8b8e3b0e36819f444c50e38e49c4fab0ad"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/electron-platform.ts",
+          "line": 9,
+          "subject": "平台策略边界",
+          "sha256": "bda759dec972dd6a4f02d93e661fcd8ba1b93c982987326a6072ac5c0c1f72a8"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/renderer-recovery.ts",
+          "line": 3,
+          "subject": "有界 renderer 恢复",
+          "sha256": "82d5bfb7edfddf0fe060288eb6f935c2b2e9fd20aa479ebb21200ac7fedf5be4"
+        },
+        {
+          "path": "dsh-plugin-desktop/src/local-window-policy.ts",
+          "line": 13,
+          "subject": "本地辅助窗口限制",
+          "sha256": "960f9c484f41103a3de15325af73626f8daf9c4ca5e280140724db9703fb25d0"
+        },
+        {
+          "path": "dsh-plugin-desktop/tests/local-window-policy.spec.ts",
+          "line": 21,
+          "subject": "窗口隔离代表性测试，仅阅读",
+          "sha256": "ef12785fdc33e371e9d1e4ff6206d71394b2d6639477b1d8790e570841dbe484"
+        },
+        {
+          "path": "dsh-plugin-desktop/tests/window-options.spec.ts",
+          "line": 50,
+          "subject": "平台窗口代表性测试，仅阅读",
+          "sha256": "cb96820874e4bd1451b88ddca4789fcddb1b9e2a1958783f27143c4bf2c13fe8"
+        },
+        {
+          "path": "LICENSE",
+          "line": 1,
+          "subject": "项目授权文件",
+          "sha256": "ae36246eca21ae16838d566147ab356fd79bdf9ae1c2aa53349700e083f2d679"
+        }
+      ]
+    }
+  ],
+  "official_sources": [
+    {
+      "url": "https://github.com/openai/codex/blob/e269f2164cbb9f499e4f22301c393500e2a831f3/codex-rs/core/config.schema.json",
+      "sha256": "edb71e6100c17332fba5759e91ba20e10521b078665ad993aab04454b285d3b3"
+    },
+    {
+      "url": "https://github.com/openai/codex/blob/e269f2164cbb9f499e4f22301c393500e2a831f3/codex-rs/protocol/src/openai_models.rs",
+      "sha256": "af953ba0896b5a8b62886374467d10bb432c3dfc1b77cff56a53a3176757cd23"
+    },
+    {
+      "url": "https://github.com/openai/codex/blob/e269f2164cbb9f499e4f22301c393500e2a831f3/codex-rs/models-manager/src/manager.rs",
+      "sha256": "8ae229b8587990f9f9643d019a56703f48465172ddf75bc22a158c09f489ed90"
+    }
+  ],
+  "local_observations": [
+    {
+      "app": "星算助手",
+      "bundle_id": "xyz.xsai5.desktop",
+      "version": "1.6.1",
+      "build": "1.6.1",
+      "info_plist_sha256": "b02aa02cced2e5b31463dc34818114112392b7285ddcea2ee018ae59d3ff2a3e"
+    },
+    {
+      "app": "CodexSplit",
+      "bundle_id": "com.aitabby.codexsplit",
+      "version": "2.0.1",
+      "build": "2000010",
+      "info_plist_sha256": "53a4c1f51fa73ccd89bce59214e15d8bd59dbac4d0dc7cbb7d5bf98f26d1be16"
+    },
+    {
+      "app": "ChatGPT",
+      "bundle_id": "com.openai.codex",
+      "version": "26.908.70816",
+      "build": "9275",
+      "info_plist_sha256": "f3f81abaedd92c2d52fcbd4e13569a3d14eb022a242929d02401c1fc13f16d39"
+    },
+    {
+      "source": "local_codex_app_server_generated_schema",
+      "file": "ModelListResponse.json",
+      "sha256": "c7b58b332f6cf18fd64235409a6daf27bb9e6c09d12dcd0daa2f3dc628b55f6f"
+    },
+    {
+      "source": "local_codex_app_server_generated_schema",
+      "file": "ModelListParams.json",
+      "sha256": "de29a536c00a5b8f46f34dba417dabd93365305571a8ed200e33bea85db68b5a"
+    },
+    {
+      "source": "local_codex_app_server_generated_schema",
+      "file": "ConfigReadParams.json",
+      "sha256": "257c54a423b47c1d209ff1076765a1564d82322fd5161670fd489a2874de1bac"
+    },
+    {
+      "source": "local_codex_app_server_generated_schema",
+      "file": "ConfigBatchWriteParams.json",
+      "sha256": "d11e244258ffaf8a37a0ca4afdbe589d07cb7881b72f06b7f730fddbab9ad613"
+    },
+    {
+      "source": "local_codex_app_server_generated_schema",
+      "file": "ModelProviderCapabilitiesReadResponse.json",
+      "sha256": "5c42590f728289daaa441b947617398a0ca3aa17479013b3c564a5d314a3c9cf"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "referimg/split-01.jpg",
+      "sha256": "2fbf531d1e8f863a55f51dd3cf6479e9803ea4d19e29d207f98cb39ea556f1b3"
+    },
+    {
+      "path": "referimg/split-02.jpg",
+      "sha256": "f609e8c7bcf0111731686145ebda419078df5ba238cbbd836338ceecdd133da8"
+    },
+    {
+      "path": "referimg/split-03.jpg",
+      "sha256": "4b351185b62afe4aa54020fd2fbcefad3b5d79d22ffb8703186054ec0a52ae38"
+    },
+    {
+      "path": "referimg/split-04.jpg",
+      "sha256": "5f504ec8d60fe78c26631f917f4bb8d03272f19db3ff64325f63f335b9ef5354"
+    },
+    {
+      "path": "referimg/split-05.jpg",
+      "sha256": "70e4bb2e74f34e3acd64507116d3a885b36389bf4acb8953ff2f0439a03e67df"
+    },
+    {
+      "path": "referimg/split-06.jpg",
+      "sha256": "90a65e8abda86276c28fc997e6e2f6f4ca22a4403dd65982985202653eab0c4f"
+    },
+    {
+      "path": "referimg/split-07.jpg",
+      "sha256": "9c76fc1a031e9fb7a3cdece1908e8fd897614c3f95709efd738ada802eae177c"
+    },
+    {
+      "path": "referimg/split-08.jpg",
+      "sha256": "d291915b49b0bb13ce3a46309a4e010c28f62f0a24c36fb332d60289dec69d9c"
+    },
+    {
+      "path": "referimg/split-09.jpg",
+      "sha256": "9626061037acb3ec6b1bbdfbae689802ce832130ca595fb06c6b78ffd0f2e674"
+    }
+  ],
+  "last_review_date": "2026-09-18",
+  "user_reports": [
+    {
+      "source": "user_relay_of_xingsuan_developer",
+      "recorded_date": "2026-09-18",
+      "subject": "此前 Tauri、因内嵌浏览器成本迁移 Electron",
+      "verification": "Current Electron package independently observed; migration cause and timing not independently verified"
+    }
+  ],
+  "desktop_shell_sources": [
+    {
+      "url": "https://v2.tauri.app/reference/webview-versions/",
+      "accessed_date": "2026-09-18"
+    },
+    {
+      "url": "https://v2.tauri.app/security/capabilities/",
+      "accessed_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.electronjs.org/docs/latest/",
+      "accessed_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.electronjs.org/docs/latest/tutorial/process-model",
+      "accessed_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.electronjs.org/docs/latest/tutorial/security",
+      "accessed_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.electronjs.org/docs/latest/api/web-contents-view",
+      "accessed_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.electronjs.org/docs/latest/api/session",
+      "accessed_date": "2026-09-18"
+    }
+  ]
+}
